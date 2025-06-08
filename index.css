@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #eff3f5; 
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* centers the content within the div */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* image styling */
+.center-img {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 1s ease; /* Added opacity transition */
+    opacity: 0; /* Initially set the image to be invisible */
+}
+
+/* image scaling on hover */
+.center-img:hover {
+    transform: scale(1.2);
+}
+
+/*fade-in effect when the page loads*/
+body {
+    animation: fadeIn 1s ease-in-out; 
+}
+
+/*fade-in keyframes*/
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*fade-in to the gif*/
+.center-img {
+    animation: fadeIn 2s ease-in-out forwards; /* Fade in the image */
+}

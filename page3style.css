@@ -1,0 +1,84 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #eff3f5;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    flex-direction: column;
+    position: relative;
+}
+
+/*canvas container is centered */
+#canvas-container {
+    margin-bottom: 20px;
+}
+
+/*navigation buttons container*/
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /*gap between the left and right buttons*/
+    position: absolute;
+    bottom: 100px;
+    left: 50%; /*centers horizontally */
+    transform: translateX(-50%); /*for exact centering*/
+}
+
+/*navigation buttons */
+.nav-button {
+    font-size: 24px;
+    color: #000;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+/*grow effect when mouse hovers*/
+.nav-button:hover {
+    transform: scale(1.2);
+}
+
+.nav-button.left:hover {
+    color: #34dbea; /*changes colour of left button text on hover*/
+}
+
+.nav-button.right:hover {
+    color: #34dbea; /*changes colour of right button text on hover*/
+}
+
+/*subtitle styling with fade-in effect */
+.subtitle {
+    font-size: 16px;
+    color: #62747b;
+    margin-bottom: 20px;
+    text-align: center;
+    opacity: 0; 
+    animation: fadeIn 2s ease-in-out forwards;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; 
+}
+
+/*keyframes for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*grow effect on hover */
+.subtitle:hover {
+    transform: scale(1.1); 
+    color: #30bdc9;
+}
